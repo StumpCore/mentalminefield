@@ -79,11 +79,32 @@ function updateVideoFrame(ind) {
     fillVideoFeed();
 }
 
+// Adding the Click Event to the Nav-Burger Menu
+function openBurgerMenu() {
+    const navMenu = document.querySelector('#nav-link-menu');
+    const visibility = getComputedStyle(navMenu).visibility;
+
+    if (visibility === 'hidden') {
+        navMenu.style.visibility = 'visible';
+    } else {
+        navMenu.style.visibility = 'hidden';
+    }
+
+}
 
 
+
+//Main App loaded
 let slideIndex = 0;
 slideShow();
 fillVideoFeed();
+
+const burgerMenu = document.querySelector('#nav-menu-burger');
+burgerMenu.addEventListener("click", openBurgerMenu);
+
+if (burgerMenu.style.visibility === 'hidden') {
+    document.querySelector('#nav-link-menu').removeAttribute('style');
+}
 
 
 

@@ -382,6 +382,10 @@ h1 {
 
 /* Desktop View */
 @media screen and (min-width: 1400px) {
+    #nav-link-menu {
+        visibility: visible;
+    }
+
     .wrapper-text {
         font-size: 3em;
     }
